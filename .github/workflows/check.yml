@@ -23,7 +23,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y vagrant
           vagrant --version
-
+      - name: Встановити VirtualBox
+        run: |
+          sudo apt-get install -y virtualbox
       - name: vagrant validate
         id: validate
         continue-on-error: true
